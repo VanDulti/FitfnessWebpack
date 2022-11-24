@@ -14,5 +14,5 @@ class ExerciseService {
     }
 }
 
-const userService = new ExerciseService()
-export default userService 
+const exerciseService = new ExerciseService()
+export default exerciseService 
