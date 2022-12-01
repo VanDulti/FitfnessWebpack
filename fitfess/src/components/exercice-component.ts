@@ -26,4 +26,4 @@ class UserComponent extends HTMLElement {
 
 }
  
-customElements.define("user-component", UserComponent)
+customElements.define("exercice-component", UserComponent)
