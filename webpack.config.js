@@ -22,7 +22,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Hello World"
+      title: "Fitfness Webpack"
     })
   ],
   devtool: "cheap-source-map",
