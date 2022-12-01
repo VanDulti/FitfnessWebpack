@@ -1,4 +1,4 @@
-import { Exercise } from "./model/"
+import { Exercise } from "./model/exercise"
 import model from "./model/store"
 import store from "./model/store"
 import produce from "immer"
@@ -8,8 +8,8 @@ class ExerciseService {
     async fetchUsers() {
         const response = await fetch(url)
         let model = store.getValue()
-        let users: [] = await response.json()
-        let nextState = produce(model, draft=>{draft.users = users})
+        let exercises: [] = await response.json()
+        let nextState = produce(model, draft=>{draft.exercises = exercises})
         store.next(nextState)
     }
 }
