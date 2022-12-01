@@ -11,9 +11,9 @@ class AppComponent extends HTMLElement {
     }
     connectedCallback() {
         console.log("connected")
-        this.arender()
+        this.render()
     }
-    arender() {
+    render() {
         render(appComponentTemplate, this.shadowRoot)    
     }
 }
