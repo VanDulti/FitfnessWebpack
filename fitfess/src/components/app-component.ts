@@ -1,10 +1,9 @@
 import {html, render} from "lit-html"
-import "./user-table-component"
-import "./user-component"
+import "./bodypart-table-component"
+import "./exercice-component"
 
 const appComponentTemplate = html`
-    <user-table-component id="table"></user-table-component>
-    <user-component id="user"></user-component>
+    <bodypart-table-component id="table"></bodypart-table-component>
 `
 
 class AppComponent extends HTMLElement {
@@ -20,8 +19,8 @@ class AppComponent extends HTMLElement {
     render() {
         render(appComponentTemplate, this.shadowRoot)
         const userTableComponent = this.shadowRoot.getElementById("table")
-        const userComponent: HTMLElement = this.shadowRoot.querySelector("user-component")
-        userTableComponent.addEventListener("user-selected", (e: CustomEvent) => {
+        const userComponent: HTMLElement = this.shadowRoot.querySelector("exercice-component")
+        userTableComponent.addEventListener("exercice-selected", (e: CustomEvent) => {
             const user = e.detail.user
             console.log("user selected", user)
             userComponent.setAttribute("id", user.id)
