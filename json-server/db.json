@@ -1,6 +1,7 @@
 {
   "exercises": [
     {
+      "id": 1,
       "name": "Squat",
       "category": "Barbell",
       "body": "Legs",
@@ -8,6 +9,7 @@
       "image": "https://modusx.de/wp-content/uploads/2021/10/kniebeugen-ohne-gewicht-air-squat.gif"
     },
     {
+      "id": 2,
       "name": "Bench Press",
       "category": "Barbell",
       "body": "Chest",
@@ -15,6 +17,7 @@
       "image": ""
     },
     {
+      "id": 3,
       "name": "Deadlift",
       "category": "Barbell",
       "body": "Back",
@@ -22,6 +25,7 @@
       "image": "https://modusx.de/wp-content/uploads/2021/10/klassisches-kreuzheben.gif"
     },
     {
+      "id": 4,
       "name": "Push Up",
       "category": "Bodyweight",
       "body": "Chest",
@@ -29,6 +33,7 @@
       "image": "https://modusx.de/wp-content/uploads/2021/01/liegestuetze.gif"
     },
     {
+      "id": 5,
       "name": "Front Raise",
       "category": "Dumbbell",
       "body": "Shoulders",
@@ -36,6 +41,7 @@
       "image": "https://modusx.de/wp-content/uploads/2021/03/frontheben-kurzhanteln-parallel.gif"
     },
     {
+      "id": 6,
       "name": "Hammer Curl",
       "category": "Dumbbell",
       "body": "Arms",
@@ -43,6 +49,7 @@
       "image": "https://modusx.de/wp-content/uploads/2021/07/hammer-curls-kurzhantel-stehend.gif"
     },
     {
+      "id": 7,
       "name": "Lunge",
       "category": "Bodyweight",
       "body": "Legs",
@@ -50,6 +57,7 @@
       "image": "https://modusx.de/wp-content/uploads/2021/10/klassische-lunges.gif"
     },
     {
+      "id": 8,
       "name": "Skullcrusher",
       "category": "Dumbbell",
       "body": "Arms",
@@ -57,6 +65,7 @@
       "image": "https://modusx.de/wp-content/uploads/2021/07/french-press-kurzhanteln-liegend.gif"
     },
     {
+      "id": 9,
       "name": "Handstand Push Up",
       "category": "Bodyweight",
       "body": "Legs",
@@ -64,6 +73,7 @@
       "image": "https://modusx.de/wp-content/uploads/2021/04/handstand-push-up.gif"
     },
     {
+      "id": 10,
       "name": "Chin Up",
       "category": "Bodyweight",
       "body": "Back",
@@ -71,6 +81,7 @@
       "image": "https://modusx.de/wp-content/uploads/2021/03/klassische-klimmzuege-mit-obergriff.gif"
     },
     {
+      "id": 11,
       "name": "Ab Wheel",
       "category": "Bodyweight",
       "body": "Core",
@@ -78,6 +89,7 @@
       "image": "https://modusx.de/wp-content/uploads/2021/10/bauchrolle-mit-dem-wheel-roller.gif"
     },
     {
+      "id": 12,
       "name": "Rowing",
       "category": "Cardio",
       "body": "Cardio",

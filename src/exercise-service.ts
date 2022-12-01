@@ -5,11 +5,14 @@ import produce from "immer"
 const url = "http://localhost:3000/exercises"
 
 class ExerciseService {
-    async fetchUsers() {
+    async fetch() {
+        console.log("test1")
         const response = await fetch(url)
+        console.log("test2")
+        console.log(response)
         let model = store.getValue()
-        let exercises: [] = await response.json()
-        let nextState = produce(model, draft=>{draft.exercises = exercises})
+        let exercises: [Exercise] = await response.json()
+        let nextState = produce(model, draft => { draft.exercises = exercises })
         store.next(nextState)
     }
 }
