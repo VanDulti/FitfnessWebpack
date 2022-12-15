@@ -3,12 +3,12 @@ import { html, render } from "lit-html"
 import { Exercise } from "../model/exercise"
 import exerciseService from "../exercise-service"
 import store from "../model/store"
+import Navigo from "navigo"
+import router from "./app-component"
 
 
 const tableTemplate = html`
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-   
-    <h1>Fitfness </h1>
     <table class="w3-table w3-striped w3-bordered">    
         <thead>
             <tr>
@@ -38,11 +38,10 @@ class ExerciseTableComponent extends HTMLElement {
         users.forEach(exercise => {
             const row = body.insertRow()
             row.onclick = () => {
-                const event = new CustomEvent("exercise-selected", { detail: { exercise: exercise } })
-                this.dispatchEvent(event)
+                router.router.navigate(`/exercises/${exercise.id}`)
             }
             render(rowTemplate(exercise), row)
         })
     }
 }
-customElements.define("exercise-table-component", ExerciseTableComponent)
+customElements.define("exercise-table", ExerciseTableComponent)

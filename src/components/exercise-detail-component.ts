@@ -23,7 +23,7 @@ const template = html`
     </div>
 `
 
-class ExerciseComponent extends HTMLElement {
+class ExerciseDetailComponent extends HTMLElement {
     static get observedAttributes() {
         return ["id"]
     }
@@ -56,4 +56,4 @@ class ExerciseComponent extends HTMLElement {
     }
 }
 
-customElements.define("exercise-selected", ExerciseComponent)
+customElements.define("exercise-detailed", ExerciseDetailComponent)
