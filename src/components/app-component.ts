@@ -2,7 +2,6 @@ import Navigo from 'navigo';
 import { html, render } from "lit-html"
 import "./exercise-table-component"
 import "./exercise-detail-component"
-import { Console } from 'console';
 
 const appComponentTemplate = html`
     <h1>Fitfness</h1>
@@ -21,34 +20,44 @@ class AppComponent extends HTMLElement {
         this.attachShadow({ mode: "open" })
     }
     connectedCallback() {
-        console.log("connected")
+        console.log("AppComponent connected")
         this.render()
         router.on({
             '/': () => {
                 console.log("/")
-                this.renderContent("exercise-table")
+                this.showTable()
             },
             '/exercises/:id': ({ data }: any) => {
-                console.log(data.id); // { id: 'xxx' }
-                this.renderContent("exercise-detailed")
+                console.log(data.id);
+                this.showDetails(data.id)
             }
         }).notFound(function () {
             console.log("/not found");
         }).resolve();
     }
-    renderContent(selector: string) {
-        const content = this.shadowRoot.querySelector("#content")
-        for (const e of content.children) {
-            (e as HTMLElement).style.display = "none"
-        }
-        const selected: HTMLElement = content.querySelector(selector)
-        selected.style.display = "block"
+
+    showDetails(id: number) {
+        const table: HTMLElement = this.shadowRoot.querySelector("exercise-table")
+        table.style.display = "none"
+
+        const details: HTMLElement = this.shadowRoot.querySelector("exercise-detailed")
+        details.setAttribute("id", id.toString())
+        details.style.display = "block"
     }
+
+    showTable() {
+        const details: HTMLElement = this.shadowRoot.querySelector("exercise-detailed")
+        details.style.display = "none"
+
+        const table: HTMLElement = this.shadowRoot.querySelector("exercise-table")
+        table.style.display = "block"
+    }
+
     render() {
         render(appComponentTemplate, this.shadowRoot)
     }
 }
 
-export default {router}
+export default router
 
 customElements.define("app-component", AppComponent)

@@ -4,23 +4,21 @@ import { Exercise } from "../model/exercise"
 import store from "../model/store"
 
 const template = html`
-    <div id="exercise-details-container" class="p-shadow-2">
     <div class="close p-strawberry-300-color">⬤</div>
-    <h1 class="name">Exercise Name</h1>
-    <img class="image">
+    <h1 id="name">Exercise Name</h1>
+    <img id="image">
     <table>
         <tr>
             <th>Category</th>
-            <td class="category"></td>
+            <td id="category"></td>
         </tr>
         <tr>
             <th>Bodypart</th>
-            <td class="bodypart"></td>
+            <td id="bodypart"></td>
         </tr>
     </table>
     <h2>Description</h2>
-    <p class="description"></p>
-    </div>
+    <p id="description"></p>
 `
 
 class ExerciseDetailComponent extends HTMLElement {
@@ -32,27 +30,34 @@ class ExerciseDetailComponent extends HTMLElement {
         this.attachShadow({ mode: "open" })
     }
     attributeChangedCallback(name: string, oldValue: string, value: string) {
-        console.log("TODO: display user", value)
+        console.log(`attribute ${name} changed: ${oldValue} -> ${value}`)
+        const id = parseInt(value)
+        const exercise = store.value.exercises.find((value) => value.id == id)
+        this.render(exercise)
     }
     connectedCallback() {
+        console.log("ExerciseDetailComponent connected")
         exerciseService.fetch()
-        store.subscribe(model => this.render(model.exercises[parseInt(this.getAttribute("id"))]))
-        console.log("exercise details connected")
+        store.subscribe(model => {
+            const id = parseInt(this.getAttribute("id"))
+            const exercise = model.exercises.find((value) => value.id == id)
+            return this.render(exercise)
+        })
     }
     private render(exercise: Exercise) {
-        const name = this.querySelector('.name');
-        const bodypart = this.querySelector('.bodypart');
-        const category = this.querySelector('.category');
-        const description = this.querySelector('.description');
-        const image = this.querySelector<HTMLImageElement>('.image');
+        render(template, this.shadowRoot)
+        if(exercise == undefined) return;
+        const name = this.shadowRoot.querySelector('#name');
+        const bodypart = this.shadowRoot.querySelector('#bodypart');
+        const category = this.shadowRoot.querySelector('#category');
+        const description = this.shadowRoot.querySelector('#description');
+        const image: HTMLImageElement = this.shadowRoot.querySelector('#image');
 
         name.textContent = exercise.name;
         bodypart.textContent = exercise.body;
         category.textContent = exercise.category;
         description.textContent = exercise.description;
         image.src = exercise.image;
-
-        render(template, this.shadowRoot)
     }
 }
 
