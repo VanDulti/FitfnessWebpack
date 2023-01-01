@@ -1,10 +1,10 @@
 export interface Exercise {
-  id: number,
-  name: string,
-  category: string,
-  body: string,
-  description: string,
-  image: string
+  readonly id: number,
+  readonly name: string,
+  readonly category: string,
+  readonly body: string,
+  readonly description: string,
+  readonly image: string
 }
 
 /*
