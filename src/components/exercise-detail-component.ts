@@ -4,22 +4,36 @@ import { Exercise } from "../model/exercise"
 import store from "../model/store"
 
 const template = html`
-    <div class="close p-strawberry-300-color">⬤</div>
-    <h1 id="name">Exercise Name</h1>
-    <img id="image">
-    <table>
-        <tr>
-            <th>Category</th>
-            <td id="category"></td>
-        </tr>
-        <tr>
-            <th>Bodypart</th>
-            <td id="bodypart"></td>
-        </tr>
-    </table>
-    <h2>Description</h2>
-    <p id="description"></p>
-`
+    <head>    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    </head>
+
+    <h1 id="name" class="title" style="font-family: Verdana, sans-serif;width: 1000px;margin: 0 auto;"></h1>
+    <br>
+
+    <div class="card" style="font-family: Verdana, sans-serif;width: 1000px;margin: 0 auto;"> 
+        <div class="card-content" style="font-family: Verdana, sans-serif;margin: 0 auto;">
+            <div style="text-align: center;">
+                <img id="image">
+            </div>
+            <table style="font-family: Verdana, sans-serif;">
+                <tr>
+                    <th>Category:</th>
+                    <td id="category"></td>
+                </tr>
+                <tr>
+                    <th>Bodypart:</th>
+                    <td id="bodypart"></td>
+                </tr>
+                <tr>
+                    <th>Description:</th>
+                    <td id="description" style="white-space:pre-line;"></td>
+                </tr>
+            </table>
+        </div>
+    </div>`
 
 class ExerciseDetailComponent extends HTMLElement {
     static get observedAttributes() {

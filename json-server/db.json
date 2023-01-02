@@ -5,7 +5,7 @@
       "name": "Squat",
       "category": "Barbell",
       "body": "Legs",
-      "description": "Instructions:\n\n 1. Place the bar between the traps and the upper back, with the hands shoulder width apart.\n\n 2. Place feet shoulder width apart and descend by breaking at the hips and sitting backwards.\n\n 3. Keep the head in a neutral position, back and spine in a straight and neutral position, the core flexed and knees pushed slightly outwards.\n\n 4. Descend to the bottom where thighs are parallel to the floor.\n\n 5. Push through the heel and middle foot to bring yourself back to starting position.\n\n 6. Repeat for reps.",
+      "description": "\n 1. Place the bar between the traps and the upper back, with the hands shoulder width apart.\n\n 2. Place feet shoulder width apart and descend by breaking at the hips and sitting backwards.\n\n 3. Keep the head in a neutral position, back and spine in a straight and neutral position, the core flexed and knees pushed slightly outwards.\n\n 4. Descend to the bottom where thighs are parallel to the floor.\n\n 5. Push through the heel and middle foot to bring yourself back to starting position.\n\n 6. Repeat for reps.",
       "image": "https://modusx.de/wp-content/uploads/2021/10/kniebeugen-ohne-gewicht-air-squat.gif"
     },
     {
@@ -13,7 +13,7 @@
       "name": "Bench Press",
       "category": "Barbell",
       "body": "Chest",
-      "description": "Instructions:\n\n 1. Lie flat on the bench holding the barbell with a shoulder width pronated grip.\n\n 2. Retract scapula and have elbows between 45 to 90 degree angle. An advanced tip is to tuck the shoulders down into the sockets and driven back.\n\n 3. Lift bar from the rack and hold above the chest with arms extended.\n\n 4. Breathe in and lower bar to the middle chest.\n\n 5. After pausing at the bottom, push the bar towards the starting position squeezing the chest.\n\n 6. Repeat for reps.",
+      "description": "\n 1. Lie flat on the bench holding the barbell with a shoulder width pronated grip.\n\n 2. Retract scapula and have elbows between 45 to 90 degree angle. An advanced tip is to tuck the shoulders down into the sockets and driven back.\n\n 3. Lift bar from the rack and hold above the chest with arms extended.\n\n 4. Breathe in and lower bar to the middle chest.\n\n 5. After pausing at the bottom, push the bar towards the starting position squeezing the chest.\n\n 6. Repeat for reps.",
       "image": ""
     },
     {
@@ -21,7 +21,7 @@
       "name": "Deadlift",
       "category": "Barbell",
       "body": "Back",
-      "description": "Instructions:\n\n 1. Approach the bar so it is positioned across the center of the foot.\n\n 2. Place feet shoulder width apart (note this is for the conventional deadlift) and grip the bar at shoulder width apart.\n\n 3. Lower hips and bend knees to bring shins into the bar. Lift the chest and take a deep breath to brace the core (should be braced the entire movement). Retract shoulder blades to take the slack out of the bar.\n\n 4. Pull bar upward extending hips and straightening the torso.\n\n 5. Return weight to the floor in a controlled motion by breaking at the hips and bending the legs.\n\n 6. Repeat for reps.",
+      "description": "\n 1. Approach the bar so it is positioned across the center of the foot.\n\n 2. Place feet shoulder width apart (note this is for the conventional deadlift) and grip the bar at shoulder width apart.\n\n 3. Lower hips and bend knees to bring shins into the bar. Lift the chest and take a deep breath to brace the core (should be braced the entire movement). Retract shoulder blades to take the slack out of the bar.\n\n 4. Pull bar upward extending hips and straightening the torso.\n\n 5. Return weight to the floor in a controlled motion by breaking at the hips and bending the legs.\n\n 6. Repeat for reps.",
       "image": "https://modusx.de/wp-content/uploads/2021/10/klassisches-kreuzheben.gif"
     },
     {
@@ -29,7 +29,7 @@
       "name": "Push Up",
       "category": "Bodyweight",
       "body": "Chest",
-      "description": "Instructions:\n\n 1. Lie prone on floor with hands slightly wider than shoulder width.\n\n 2. Raise body up off floor by extending arms with body straight.\n\n 3. Keeping body straight, lower body to floor by bending arms. Push body up until arms are extended.\n\n 4. Repeat for reps.",
+      "description": "\n 1. Lie prone on floor with hands slightly wider than shoulder width.\n\n 2. Raise body up off floor by extending arms with body straight.\n\n 3. Keeping body straight, lower body to floor by bending arms. Push body up until arms are extended.\n\n 4. Repeat for reps.",
       "image": "https://modusx.de/wp-content/uploads/2021/01/liegestuetze.gif"
     },
     {
@@ -37,7 +37,7 @@
       "name": "Front Raise",
       "category": "Dumbbell",
       "body": "Shoulders",
-      "description": "Instructions:\n\n 1. Pick up the dumbbells with both hand and position them in front of your legs with your elbows straight.\n\n 2. Raise the dumbbells in front of you until your arms are at least parallel to the floor or slightly beyond.\n\n 3. Lower and repeat for reps.",
+      "description": "\n 1. Pick up the dumbbells with both hand and position them in front of your legs with your elbows straight.\n\n 2. Raise the dumbbells in front of you until your arms are at least parallel to the floor or slightly beyond.\n\n 3. Lower and repeat for reps.",
       "image": "https://modusx.de/wp-content/uploads/2021/03/frontheben-kurzhanteln-parallel.gif"
     },
     {
@@ -45,7 +45,7 @@
       "name": "Hammer Curl",
       "category": "Dumbbell",
       "body": "Arms",
-      "description": "Instructions:\n\n 1. Stand with a dumbbell in each hand and with elbows touching the side of the torso.\n\n 2. Using biceps, pull forearms and hands upward until fully contracted.\n\n 3. Squeeze biceps and slowly lower back to the starting position.\n\n 4. Repeat for reps.",
+      "description": "\n 1. Stand with a dumbbell in each hand and with elbows touching the side of the torso.\n\n 2. Using biceps, pull forearms and hands upward until fully contracted.\n\n 3. Squeeze biceps and slowly lower back to the starting position.\n\n 4. Repeat for reps.",
       "image": "https://modusx.de/wp-content/uploads/2021/07/hammer-curls-kurzhantel-stehend.gif"
     },
     {
@@ -53,7 +53,7 @@
       "name": "Lunge",
       "category": "Bodyweight",
       "body": "Legs",
-      "description": "Instructions:\n\n 1. With feet shoulder width apart in an upright position, take a medium length stride forward.\n\n 2. Descend by bending the forward leg to a comfortable position where the rear knee is just above the floor.\n\n 3. Knee should be roughly 90 degrees. Avoid knee extending far beyond the foot to prevent uneeded stress on joint.\n\n 4. Push upward with your forward foot, coming back to the starting position.\n\n 5. Repeat for reps.",
+      "description": "\n 1. With feet shoulder width apart in an upright position, take a medium length stride forward.\n\n 2. Descend by bending the forward leg to a comfortable position where the rear knee is just above the floor.\n\n 3. Knee should be roughly 90 degrees. Avoid knee extending far beyond the foot to prevent uneeded stress on joint.\n\n 4. Push upward with your forward foot, coming back to the starting position.\n\n 5. Repeat for reps.",
       "image": "https://modusx.de/wp-content/uploads/2021/10/klassische-lunges.gif"
     },
     {
@@ -61,7 +61,7 @@
       "name": "Skullcrusher",
       "category": "Dumbbell",
       "body": "Arms",
-      "description": "Instructions:\n\n 1. Sit down on a flat bench with the barbell on your lap.\n\n 2. Raise the dumbbells up to shoulder height by kicking your knees up.\n\n 3. While holding the dumbbells in place, lie down on the bench with your arms fully extended and the weights directly above your shoulders.\n\n 4. Lower the weights bending your elbows until the dumbbells are positioned to the side of your head. Make sure your elbows stay in place and that you slow your descent as the weight approaches your head.\n\n 5. Push the bar back up to starting position.\n\n 6. Repeat for reps.",
+      "description": "\n 1. Sit down on a flat bench with the barbell on your lap.\n\n 2. Raise the dumbbells up to shoulder height by kicking your knees up.\n\n 3. While holding the dumbbells in place, lie down on the bench with your arms fully extended and the weights directly above your shoulders.\n\n 4. Lower the weights bending your elbows until the dumbbells are positioned to the side of your head. Make sure your elbows stay in place and that you slow your descent as the weight approaches your head.\n\n 5. Push the bar back up to starting position.\n\n 6. Repeat for reps.",
       "image": "https://modusx.de/wp-content/uploads/2021/07/french-press-kurzhanteln-liegend.gif"
     },
     {
@@ -69,7 +69,7 @@
       "name": "Handstand Push Up",
       "category": "Bodyweight",
       "body": "Legs",
-      "description": "Instructions:\n\n 1. Starting by facing a wall and, with arms extended, flip into a handstand position against the wall.\n\n 2. Keeping the body as straight as possible slowly lower yourself until your head almost touches the floor.\n\n 3. Push back to the starting position while exhaling until elbows are near full extension.\n\n 4. Repeat for reps.",
+      "description": "\n 1. Starting by facing a wall and, with arms extended, flip into a handstand position against the wall.\n\n 2. Keeping the body as straight as possible slowly lower yourself until your head almost touches the floor.\n\n 3. Push back to the starting position while exhaling until elbows are near full extension.\n\n 4. Repeat for reps.",
       "image": "https://modusx.de/wp-content/uploads/2021/04/handstand-push-up.gif"
     },
     {
@@ -77,7 +77,7 @@
       "name": "Chin Up",
       "category": "Bodyweight",
       "body": "Back",
-      "description": "Instructions:\n\n 1. Place hands on the bar with palms facing yourself and a grip slightly within shoulder width.\n\n 2. Retract the shoulders and tuck them down and keep the core tight and back slightly arched.\n\n 3. Breathing out, pull the torso upward until the head is above the bar keeping elbows against the side of the body.\n\n 4. Lower back to the starting position while breathing in.\n\n 5. Repeat for reps.",
+      "description": "\n 1. Place hands on the bar with palms facing yourself and a grip slightly within shoulder width.\n\n 2. Retract the shoulders and tuck them down and keep the core tight and back slightly arched.\n\n 3. Breathing out, pull the torso upward until the head is above the bar keeping elbows against the side of the body.\n\n 4. Lower back to the starting position while breathing in.\n\n 5. Repeat for reps.",
       "image": "https://modusx.de/wp-content/uploads/2021/03/klassische-klimmzuege-mit-obergriff.gif"
     },
     {
@@ -85,7 +85,7 @@
       "name": "Ab Wheel",
       "category": "Bodyweight",
       "body": "Core",
-      "description": "Instructions:\n\n 1. Hold the ab wheel with both hands and kneel on the floor.\n\n 2. Place the ab roller on the floor in front of your knees. This is your starting position.\n\n 3. Slowly roll the wheel forward in a controlled manner, stretching out the torso as far as you can without touching the floor with your body.\n\n 4. Stop when fully stretched and pause for a moment.\n\n 5. Pull yourself back to the starting position by contracting the abs.",
+      "description": "\n 1. Hold the ab wheel with both hands and kneel on the floor.\n\n 2. Place the ab roller on the floor in front of your knees. This is your starting position.\n\n 3. Slowly roll the wheel forward in a controlled manner, stretching out the torso as far as you can without touching the floor with your body.\n\n 4. Stop when fully stretched and pause for a moment.\n\n 5. Pull yourself back to the starting position by contracting the abs.",
       "image": "https://modusx.de/wp-content/uploads/2021/10/bauchrolle-mit-dem-wheel-roller.gif"
     },
     {
@@ -93,7 +93,7 @@
       "name": "Rowing",
       "category": "Cardio",
       "body": "Cardio",
-      "description": "Instructions:\n\n 1. Sit on seat. Position and secure feet on platform.\n\n 2. Grasp handle bar with both hands, over hand grip. With legs extended, pull handle bar to midsection, forearms horizontal.\n\n 3. Perform for time.",
+      "description": "\n 1. Sit on seat. Position and secure feet on platform.\n\n 2. Grasp handle bar with both hands, over hand grip. With legs extended, pull handle bar to midsection, forearms horizontal.\n\n 3. Perform for time.",
       "image": "https://modusx.de/wp-content/uploads/2021/03/enges-rudern-am-kabelzug-gerade-stange.gif"
     }
   ]
