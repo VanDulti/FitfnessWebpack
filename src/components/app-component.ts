@@ -3,12 +3,8 @@ import { html, render } from "lit-html"
 import "./exercise-table-component"
 import "./exercise-detail-component"
 
-const appComponentTemplate = html`
-    <head>    
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    </head>
+const appComponentTemplate = html`   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
     <div class="card" style=""> 
         <div class="card-content">
