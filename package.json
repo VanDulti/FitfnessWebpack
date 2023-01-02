@@ -28,7 +28,6 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "bulma": "^0.9.4",
     "immer": "^9.0.16",
     "lit-html": "^2.4.0",
     "navigo": "^8.11.1",
