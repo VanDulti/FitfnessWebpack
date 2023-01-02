@@ -10,15 +10,13 @@ const template = html`
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     </head>
 
-    <h1 id="name" class="title" style="font-family: Verdana, sans-serif;width: 1000px;margin: 0 auto;"></h1>
-    <br>
-
-    <div class="card" style="font-family: Verdana, sans-serif;width: 1000px;margin: 0 auto;"> 
-        <div class="card-content" style="font-family: Verdana, sans-serif;margin: 0 auto;">
+    <div class="card" style="font-family: Inter, sans-serif;width: 1000px;margin: 0 auto;"> 
+         <div class="card-content" style="margin: 0 auto;">
+            <h1 id="name" class="title"></h1>
             <div style="text-align: center;">
                 <img id="image">
             </div>
-            <table style="font-family: Verdana, sans-serif;">
+            <table>
                 <tr>
                     <th>Category:</th>
                     <td id="category"></td>

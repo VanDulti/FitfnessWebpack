@@ -19,20 +19,22 @@ const tableTemplate = html`
         }
     </style>
 
-    <h1 class="title" style="font-family: Verdana, sans-serif;">Übungsübersicht</h1>
-    <div class="card"> 
-        <div class="card-content">
-            <table class="table" style="font-family: Verdana, sans-serif;width: 1400px;margin: 0 auto;">    
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Category</th>
-                        <th>Bodypart</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+    <div style="font-family: Inter, sans-serif;">
+        <h1 class="title">Übungsübersicht</h1>
+        <div class="card"> 
+            <div class="card-content">
+                <table class="table" style="width: 1400px;margin: 0 auto;">    
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Bodypart</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
         </div>
     </div>`
 

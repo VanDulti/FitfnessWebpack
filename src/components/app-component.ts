@@ -16,7 +16,7 @@ const appComponentTemplate = html`
                 <img src="Logo.png" width="150"/>
                 <div class="navbar-menu">
                     <div class="navbar-start">
-                        <a class="navbar-item" style="font-family: Verdana, sans-serif;" href="/" data-navigo>
+                        <a class="navbar-item" style="font-family: Inter, sans-serif;" href="/" data-navigo>
                             &nbsp;&nbsp;&nbsp;&nbsp;Home
                         </a>
                     </div>
