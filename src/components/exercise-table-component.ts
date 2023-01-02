@@ -17,10 +17,10 @@ const tableTemplate = html`
         background-color: #D8D8D8;
     }
     </style>
-    <h1 class="title" style="font-family: Verdana, sans-serif;">Übungsübersicht</h1>
+    <h1 class="title" style="font-family: Inter, sans-serif;">Übungsübersicht</h1>
     <div class="card"> 
         <div class="card-content">
-            <table class="table" style="font-family: Verdana, sans-serif;width: 1400px;margin: 0 auto;">    
+            <table class="table" style="font-family: Inter, sans-serif;width: 1400px;margin: 0 auto;">    
                 <thead>
                     <tr>
                     <th>Id</th><th>Name</th>
