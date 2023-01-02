@@ -4,11 +4,7 @@ import { Exercise } from "../model/exercise"
 import store from "../model/store"
 
 const template = html`
-    <head>    
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
     <div class="card" style="font-family: Inter, sans-serif;width: 1000px;margin: 0 auto;"> 
          <div class="card-content" style="margin: 0 auto;">
