@@ -4,13 +4,30 @@ import "./exercise-table-component"
 import "./exercise-detail-component"
 
 const appComponentTemplate = html`
-    <h1>Fitfness</h1>
-    <nav><a href="/" data-navigo>Home</a></nav>
-    <div id="content">
-        <exercise-table></exercise-table>
-        <exercise-detailed></exercise-detailed>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <div class="card" style=""> 
+        <div class="card-content">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <img src="Logo.png" width="150"/>
+                <div class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" style="font-family: Inter, sans-serif;" href="/" data-navigo>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Home
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </div>
-`
+
+    <br><br>
+    <div style="width: 1500px; margin: 0 auto;">
+        <div id="content">
+            <exercise-table></exercise-table>
+            <exercise-detailed></exercise-detailed>
+        </div>
+    </div>`
 
 const router = new Navigo('/');
 

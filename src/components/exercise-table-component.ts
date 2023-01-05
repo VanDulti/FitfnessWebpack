@@ -7,15 +7,32 @@ import Navigo from "navigo"
 import router from "./app-component"
 
 const tableTemplate = html`
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <table class="w3-table w3-striped w3-bordered">    
-        <thead>
-            <tr>
-            <th>Id</th><th>Name</th><th>Category</th><th>Bodypart</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>`
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <style>
+        .table tr:hover {
+            background-color: #D8D8D8;
+        }
+    </style>
+
+    <div style="font-family: Inter, sans-serif;">
+        <h1 class="title">Übungsübersicht</h1>
+        <div class="card"> 
+            <div class="card-content">
+                <table class="table" style="width: 1400px;margin: 0 auto;">    
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Bodypart</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>`
 
 const rowTemplate = (exercise: Exercise) => html
     `<td>${exercise.id}</td> <td>${exercise.name}</td><td>${exercise.category}</td> <td>${exercise.body}</td>`

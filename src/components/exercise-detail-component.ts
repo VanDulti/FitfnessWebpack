@@ -4,22 +4,30 @@ import { Exercise } from "../model/exercise"
 import store from "../model/store"
 
 const template = html`
-    <div class="close p-strawberry-300-color">⬤</div>
-    <h1 id="name">Exercise Name</h1>
-    <img id="image">
-    <table>
-        <tr>
-            <th>Category</th>
-            <td id="category"></td>
-        </tr>
-        <tr>
-            <th>Bodypart</th>
-            <td id="bodypart"></td>
-        </tr>
-    </table>
-    <h2>Description</h2>
-    <p id="description"></p>
-`
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <div class="card" style="font-family: Inter, sans-serif;width: 1000px;margin: 0 auto;"> 
+         <div class="card-content" style="margin: 0 auto;">
+            <h1 id="name" class="title"></h1>
+            <div style="text-align: center;">
+                <img id="image">
+            </div>
+            <table>
+                <tr>
+                    <th>Category:</th>
+                    <td id="category"></td>
+                </tr>
+                <tr>
+                    <th>Bodypart:</th>
+                    <td id="bodypart"></td>
+                </tr>
+                <tr>
+                    <th>Description:</th>
+                    <td id="description" style="white-space:pre-line;"></td>
+                </tr>
+            </table>
+        </div>
+    </div>`
 
 class ExerciseDetailComponent extends HTMLElement {
     static get observedAttributes() {
