@@ -7,9 +7,9 @@ const template = html`
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
     <div class="card" style="font-family: Inter, sans-serif;width: 1000px;margin: 0 auto;"> 
-         <div class="card-content" style="margin: 0 auto;">
+         <div class="card-content" style="margin: 0 auto">
             <h1 id="name" class="title"></h1>
-            <div style="text-align: center;">
+            <div style="text-align: center">
                 <img id="image">
             </div>
             <table>
@@ -23,7 +23,7 @@ const template = html`
                 </tr>
                 <tr>
                     <th>Description:</th>
-                    <td id="description" style="white-space:pre-line;"></td>
+                    <td id="description" style="white-space:pre-line"></td>
                 </tr>
             </table>
         </div>
@@ -33,16 +33,19 @@ class ExerciseDetailComponent extends HTMLElement {
     static get observedAttributes() {
         return ["id"]
     }
+
     constructor() {
         super()
         this.attachShadow({ mode: "open" })
     }
+
     attributeChangedCallback(name: string, oldValue: string, value: string) {
         console.log(`attribute ${name} changed: ${oldValue} -> ${value}`)
         const id = parseInt(value)
         const exercise = store.value.exercises.find((value) => value.id == id)
         this.render(exercise)
     }
+
     connectedCallback() {
         console.log("ExerciseDetailComponent connected")
         exerciseService.fetch()
@@ -52,20 +55,21 @@ class ExerciseDetailComponent extends HTMLElement {
             return this.render(exercise)
         })
     }
+
     private render(exercise: Exercise) {
         render(template, this.shadowRoot)
-        if(exercise == undefined) return;
-        const name = this.shadowRoot.querySelector('#name');
-        const bodypart = this.shadowRoot.querySelector('#bodypart');
-        const category = this.shadowRoot.querySelector('#category');
-        const description = this.shadowRoot.querySelector('#description');
-        const image: HTMLImageElement = this.shadowRoot.querySelector('#image');
+        if (exercise == undefined) return
+        const name = this.shadowRoot.querySelector('#name')
+        const bodypart = this.shadowRoot.querySelector('#bodypart')
+        const category = this.shadowRoot.querySelector('#category')
+        const description = this.shadowRoot.querySelector('#description')
+        const image: HTMLImageElement = this.shadowRoot.querySelector('#image')
 
-        name.textContent = exercise.name;
-        bodypart.textContent = exercise.body;
-        category.textContent = exercise.category;
-        description.textContent = exercise.description;
-        image.src = exercise.image;
+        name.textContent = exercise.name
+        bodypart.textContent = exercise.body
+        category.textContent = exercise.category
+        description.textContent = exercise.description
+        image.src = exercise.image
     }
 }
 
