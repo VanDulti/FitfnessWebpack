@@ -6,17 +6,18 @@ import "./add-exercise-component"
 
 const appComponentTemplate = html`
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/src/css/main.css"/>
 
-    <div class="card" style=""> 
+    <div class="card"> 
         <div class="card-content">
             <nav class="navbar" role="navigation" aria-label="main navigation">
-                <img src="logo.png" width="150"/>
+                <a href="/" data-navigo><img src="/logo.png" width="150"/></a>
                 <div class="navbar-menu">
                     <div class="navbar-start">
-                        <a class="navbar-item" style="font-family: Inter" href="/" data-navigo>
+                        <a class="navbar-item"  href="/" data-navigo>
                             Home
                         </a>
-                        <a class="navbar-item" style="font-family: Inter, sans-serif;" href="/add" data-navigo>
+                        <a class="navbar-item" href="/add" data-navigo>
                             Add
                         </a>
                     </div>
