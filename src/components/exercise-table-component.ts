@@ -8,17 +8,7 @@ import router from "./app-component"
 const tableTemplate = html`
     <link rel="stylesheet" href="/src/css/exercise-table.css"/>
 
-<<<<<<< HEAD
-    <style>
-        .table tr:hover {
-            background-color: #D8D8D8;
-        }
-    </style>
-
-    <div style="font-family: Inter, sans-serif">
-=======
     <div>
->>>>>>> aaf7411 (fix: using css files)
         <h1 class="title">Übungsübersicht</h1>
         <div style="font-family: Inter, sans-serif">
         <div class="field has-addons">
@@ -73,7 +63,6 @@ class ExerciseTableComponent extends HTMLElement {
     }
     async connectedCallback() {
         console.log("ExerciseTableComponent connected")
-
         exerciseService.fetch()
         store.subscribe(model => {
             this.exerciseList = model.exercises

@@ -70,6 +70,16 @@ class ExerciseDetailComponent extends HTMLElement {
         category.textContent = exercise.category;
         description.textContent = exercise.description;
         image.src = exercise.image;
+
+        const waldo: Exercise = {
+            id: 50,
+            name: "string",
+            category: "string",
+            body: "string",
+            description: "string",
+            image: "string"
+        }
+        exerciseService.postData(waldo)
     }
 }
 
