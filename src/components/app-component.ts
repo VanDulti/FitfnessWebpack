@@ -1,4 +1,4 @@
-import Navigo from 'navigo';
+import Navigo from 'navigo'
 import { html, render } from "lit-html"
 import "./exercise-table-component"
 import "./exercise-detail-component"
@@ -9,10 +9,10 @@ const appComponentTemplate = html`
     <div class="card" style=""> 
         <div class="card-content">
             <nav class="navbar" role="navigation" aria-label="main navigation">
-                <img src="Logo.png" width="150"/>
+                <img src="logo.png" width="150"/>
                 <div class="navbar-menu">
                     <div class="navbar-start">
-                        <a class="navbar-item" style="font-family: Inter, sans-serif;" href="/" data-navigo>
+                        <a class="navbar-item" style="font-family: Inter, sans-serif" href="/" data-navigo>
                             &nbsp;&nbsp;&nbsp;&nbsp;Home
                         </a>
                     </div>
@@ -29,28 +29,31 @@ const appComponentTemplate = html`
         </div>
     </div>`
 
-const router = new Navigo('/');
+const router = new Navigo('/')
 
 class AppComponent extends HTMLElement {
     constructor() {
         super()
         this.attachShadow({ mode: "open" })
     }
+
     connectedCallback() {
         console.log("AppComponent connected")
         this.render()
         router.on({
             '/': () => {
-                console.log("/")
                 this.showTable()
+                console.log("/")
             },
             '/exercises/:id': ({ data }: any) => {
-                console.log(data.id);
                 this.showDetails(data.id)
+                console.log(data.id)
             }
-        }).notFound(function () {
-            console.log("/not found");
-        }).resolve();
+        }).resolve()
+    }
+
+    render() {
+        render(appComponentTemplate, this.shadowRoot)
     }
 
     showDetails(id: number) {
@@ -68,10 +71,6 @@ class AppComponent extends HTMLElement {
 
         const table: HTMLElement = this.shadowRoot.querySelector("exercise-table")
         table.style.display = "block"
-    }
-
-    render() {
-        render(appComponentTemplate, this.shadowRoot)
     }
 }
 

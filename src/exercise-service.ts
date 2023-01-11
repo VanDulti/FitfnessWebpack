@@ -7,9 +7,9 @@ class ExerciseService {
     async fetch() {
         const response = await fetch(url)
         console.log(response)
-        let model = store.getValue()
-        let exercises: [Exercise] = await response.json()
-        let nextState = produce(model, draft => { draft.exercises = exercises })
+        const model = store.getValue()
+        const exercises: [Exercise] = await response.json()
+        const nextState = produce(model, draft => { draft.exercises = exercises })
         store.next(nextState)
     }
 }
