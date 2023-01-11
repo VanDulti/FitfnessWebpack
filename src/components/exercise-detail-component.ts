@@ -5,11 +5,12 @@ import store from "../model/store"
 
 const template = html`
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/src/css/exercise-detail.css"/>
 
-    <div class="card" style="font-family: Inter, sans-serif;width: 1000px;margin: 0 auto;"> 
-         <div class="card-content" style="margin: 0 auto">
+    <div id="card" class="card"> 
+         <div class="card-content">
             <h1 id="name" class="title"></h1>
-            <div style="text-align: center">
+            <div id="image-div">
                 <img id="image">
             </div>
             <table>
@@ -23,7 +24,7 @@ const template = html`
                 </tr>
                 <tr>
                     <th>Description:</th>
-                    <td id="description" style="white-space:pre-line"></td>
+                    <td id="description"></td>
                 </tr>
             </table>
         </div>
@@ -65,11 +66,11 @@ class ExerciseDetailComponent extends HTMLElement {
         const description = this.shadowRoot.querySelector('#description')
         const image: HTMLImageElement = this.shadowRoot.querySelector('#image')
 
-        name.textContent = exercise.name
-        bodypart.textContent = exercise.body
-        category.textContent = exercise.category
-        description.textContent = exercise.description
-        image.src = exercise.image
+        name.textContent = exercise.name;
+        bodypart.textContent = exercise.body;
+        category.textContent = exercise.category;
+        description.textContent = exercise.description;
+        image.src = exercise.image;
     }
 }
 

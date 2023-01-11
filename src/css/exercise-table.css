@@ -1,0 +1,9 @@
+.table {
+    width: 1400px;
+    margin: 0 auto
+}
+
+.table tr:hover {
+    background-color: #D8D8D8;
+    cursor: pointer;
+}

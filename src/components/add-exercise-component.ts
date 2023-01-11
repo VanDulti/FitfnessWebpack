@@ -5,13 +5,14 @@ import store from "../model/store"
 
 const template = html`
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/src/css/add-exercise.css"/>
 
-    <div style="font-family: Inter, sans-serif;width: 1000px;margin: 0 auto;">
+    <div id="div">
         <h1 class="title">Add exercise</h1>
-        <div class="card" > 
+        <div class="card"> 
             <div class="card-content">
                 <form>
-                    <div class="field" id="12">
+                    <div class="field">
                         <label class="label">ID</label>
                         <div class="control">
                             <input id="id" name="idinput" class="input" type="text" disabled>
@@ -97,8 +98,8 @@ class AddExerciseComponent extends HTMLElement {
         //Set the ID inputfield
         id.value = Math.floor(Math.random() * 100000).toString()
         
-
         //Set the selectlist with categories
+        categorySelect.innerHTML = ''
         const categories = this.getValues(exercises, 0)
         categories.forEach(category => {
             var opt = document.createElement('option');
@@ -108,6 +109,7 @@ class AddExerciseComponent extends HTMLElement {
         })
 
         //Set the selectlist with bodyparts
+        bodySelect.innerHTML = ''
         const bodyparts = this.getValues(exercises, 1)
         bodyparts.forEach(body => {
             var opt = document.createElement('option');
