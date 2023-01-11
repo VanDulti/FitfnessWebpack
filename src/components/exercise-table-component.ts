@@ -68,14 +68,16 @@ class ExerciseTableComponent extends HTMLElement {
         this.root = this.attachShadow({ mode: "closed" })
     }
     async connectedCallback() {
+        console.log("ExerciseTableComponent connected")
+
         exerciseService.fetch()
-        store.subscribe(model =>{
+        store.subscribe(model => {
             this.exerciseList = model.exercises
             this.render(model.exercises)
         })
 
         const searchButton = this.root.querySelector("#search-button")
-        searchButton.addEventListener("click", ()=>{
+        searchButton.addEventListener("click", () => {
             const searchInput = this.root.querySelector("#search-input") as HTMLInputElement
             const searchTerm = searchInput.value.toLocaleLowerCase()
             const filteredExercises = this.exerciseList.filter(exercise => exercise.name.toLowerCase().includes(searchTerm))
