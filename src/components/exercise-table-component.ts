@@ -45,6 +45,7 @@ class ExerciseTableComponent extends HTMLElement {
     }
     async connectedCallback() {
         console.log("ExerciseTableComponent connected")
+        
         exerciseService.fetch()
         store.subscribe(model => this.render(model.exercises))
     }

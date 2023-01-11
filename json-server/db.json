@@ -95,6 +95,14 @@
       "body": "Cardio",
       "description": "\n 1. Sit on seat. Position and secure feet on platform.\n\n 2. Grasp handle bar with both hands, over hand grip. With legs extended, pull handle bar to midsection, forearms horizontal.\n\n 3. Perform for time.",
       "image": "https://modusx.de/wp-content/uploads/2021/03/enges-rudern-am-kabelzug-gerade-stange.gif"
+    },
+    {
+      "id": 50,
+      "name": "string",
+      "category": "string",
+      "body": "string",
+      "description": "string",
+      "image": "string"
     }
   ]
 }
