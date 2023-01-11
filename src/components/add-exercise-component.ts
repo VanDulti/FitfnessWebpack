@@ -4,6 +4,7 @@ import { Exercise } from "../model/exercise"
 import store from "../model/store"
 
 const template = html`
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="/src/css/add-exercise.css"/>
 
     <div id="div">
@@ -96,7 +97,6 @@ class AddExerciseComponent extends HTMLElement {
 
         //Set the ID inputfield
         id.value = Math.floor(Math.random() * 100000).toString()
-
         //Set the selectlist with categories
         categorySelect.innerHTML = ''
         const categories = this.getValues(exercises, 0)
