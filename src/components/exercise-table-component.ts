@@ -81,6 +81,8 @@ class ExerciseTableComponent extends HTMLElement {
             const filteredExercises = this.exerciseList.filter(exercise => exercise.name.toLowerCase().includes(searchTerm))
             this.render(filteredExercises)
         })
+
+        
     }
     private render(exercises: Exercise[]) {
         render(tableTemplate, this.root)
