@@ -65,11 +65,11 @@ class ExerciseDetailComponent extends HTMLElement {
         const description = this.shadowRoot.querySelector('#description')
         const image: HTMLImageElement = this.shadowRoot.querySelector('#image')
 
-        name.textContent = exercise.name;
-        bodypart.textContent = exercise.body;
-        category.textContent = exercise.category;
-        description.textContent = exercise.description;
-        image.src = exercise.image;
+        name.textContent = exercise.name
+        bodypart.textContent = exercise.body
+        category.textContent = exercise.category
+        description.textContent = exercise.description
+        image.src = exercise.image
     }
 }
 

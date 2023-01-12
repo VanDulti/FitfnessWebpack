@@ -87,12 +87,12 @@ class AddExerciseComponent extends HTMLElement {
     private render(exercises: Exercise[]) {
         render(template, this.shadowRoot)
 
-        const id: HTMLInputElement = this.shadowRoot.querySelector('#id');
-        const name: HTMLInputElement = this.shadowRoot.querySelector('#name');
-        const categorySelect: HTMLInputElement = this.shadowRoot.querySelector('#categorySelect');
-        const bodySelect: HTMLInputElement = this.shadowRoot.querySelector('#bodySelect');
-        const description: HTMLInputElement = this.shadowRoot.querySelector('#description');
-        const image: HTMLInputElement = this.shadowRoot.querySelector('#image');
+        const id: HTMLInputElement = this.shadowRoot.querySelector('#id')
+        const name: HTMLInputElement = this.shadowRoot.querySelector('#name')
+        const categorySelect: HTMLInputElement = this.shadowRoot.querySelector('#categorySelect')
+        const bodySelect: HTMLInputElement = this.shadowRoot.querySelector('#bodySelect')
+        const description: HTMLInputElement = this.shadowRoot.querySelector('#description')
+        const image: HTMLInputElement = this.shadowRoot.querySelector('#image')
 
         //Set the ID inputfield
         id.value = Math.floor(Math.random() * 100000).toString()
@@ -100,20 +100,20 @@ class AddExerciseComponent extends HTMLElement {
         categorySelect.innerHTML = ''
         const categories = new Set(exercises.map((exercise) => exercise.category))
         categories.forEach(category => {
-            let opt = document.createElement('option');
-            opt.value = category;
-            opt.innerHTML = category;
-            categorySelect.appendChild(opt);
+            let opt = document.createElement('option')
+            opt.value = category
+            opt.innerHTML = category
+            categorySelect.appendChild(opt)
         })
 
         //Set the selectlist with bodyparts
         bodySelect.innerHTML = ''
         const bodyparts = new Set(exercises.map((exercise) => exercise.body))
         bodyparts.forEach(body => {
-            let opt = document.createElement('option');
-            opt.value = body;
-            opt.innerHTML = body;
-            bodySelect.appendChild(opt);
+            let opt = document.createElement('option')
+            opt.value = body
+            opt.innerHTML = body
+            bodySelect.appendChild(opt)
         })
 
         this.shadowRoot.querySelector("form").addEventListener("submit", function () {
