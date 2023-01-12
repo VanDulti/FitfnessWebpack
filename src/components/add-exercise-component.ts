@@ -4,7 +4,6 @@ import { Exercise } from "../model/exercise"
 import store from "../model/store"
 
 const template = html`
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="/src/css/add-exercise.css"/>
 
     <div id="div">
