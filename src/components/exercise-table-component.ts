@@ -9,6 +9,7 @@ const tableTemplate = html`
     <link rel="stylesheet" href="/src/css/exercise-table.css"/>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <style>
         .table tr:hover {
             background-color: #D8D8D8;
@@ -19,6 +20,9 @@ const tableTemplate = html`
 =======
     <div>
 >>>>>>> aaf7411 (fix: using css files)
+=======
+    <div>
+>>>>>>> 09447b5b8d502b63c6cc8582f911b60c9864e36d
         <h1 class="title">Übungsübersicht</h1>
         <div class="card"> 
             <div class="card-content">
