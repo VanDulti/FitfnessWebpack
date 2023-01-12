@@ -76,17 +76,6 @@ class AppComponent extends HTMLElement {
         table.style.display = "none"
     }
 
-    showAddExercise() {
-        const addExercise: HTMLElement = this.shadowRoot.querySelector("add-exercise")
-        addExercise.style.display = "block"
-
-        const details: HTMLElement = this.shadowRoot.querySelector("exercise-detailed")
-        details.style.display = "none"
-
-        const table: HTMLElement = this.shadowRoot.querySelector("exercise-table")
-        table.style.display = "none"
-    }
-
     showDetails(id: number) {
         const addExercise: HTMLElement = this.shadowRoot.querySelector("add-exercise")
         addExercise.style.display = "none"
