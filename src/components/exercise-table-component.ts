@@ -19,12 +19,26 @@ const tableTemplate = html`
         <div style="font-family: Inter, sans-serif">
         <div class="field has-addons">
             <div class="control">
-                <input class="input" type="text" placeholder="Search by name or category" id="search-input">
+                <input class="input" type="text" placeholder="Search by name" id="search-input">
             </div>
             <div class="control">
                 <button class="button is-info" id="search-button">
                     Search
                 </button>
+            </div>
+        </div>
+        <div class="field">
+            <div class="control">
+                <div class="select">
+                    <select id="categorySelect"></select>
+                    </div>
+                </div>
+            </div>
+        <div class="field">
+            <div class="control">
+                <div class="select">
+                    <select id="bodySelect"></select>
+                </div>
             </div>
         </div>
         <div class="card"> 
@@ -69,29 +83,51 @@ class ExerciseTableComponent extends HTMLElement {
     }
     async connectedCallback() {
         exerciseService.fetch()
-        store.subscribe(model =>{
+        store.subscribe(model => {
             this.exerciseList = model.exercises
             this.render(model.exercises)
         })
 
         const searchButton = this.root.querySelector("#search-button")
-        searchButton.addEventListener("click", ()=>{
+        searchButton.addEventListener("click", () => {
             const searchInput = this.root.querySelector("#search-input") as HTMLInputElement
             const searchTerm = searchInput.value.toLocaleLowerCase()
             const filteredExercises = this.exerciseList.filter(exercise => exercise.name.toLowerCase().includes(searchTerm))
             this.render(filteredExercises)
         })
-
-        
     }
+
     private render(exercises: Exercise[]) {
         render(tableTemplate, this.root)
+
+        const categorySelect: HTMLInputElement = this.root.querySelector('#categorySelect')
+        const bodySelect: HTMLInputElement = this.root.querySelector('#bodySelect')
+
         const body = this.root.querySelector("tbody")
         body.innerHTML = ''
         exercises.forEach(exercise => {
             const row = body.insertRow()
             row.onclick = () => router.navigate(`/exercises/${exercise.id}`)
             render(rowTemplate(exercise), row)
+        })
+
+        //Set the selectlist with categories
+        categorySelect.innerHTML = ''
+        const categories = new Set(exercises.map((exercises) => exercises.category))
+        categories.forEach(category => {
+            let opt = document.createElement('option')
+            opt.value = category
+            opt.innerHTML = category
+            categorySelect.appendChild(opt)
+        })
+        //Set the selectlist with bodypart
+        bodySelect.innerHTML = ''
+        const bodypart = new Set(exercises.map((exercises) => exercises.body))
+        bodypart.forEach(bodypart => {
+            let opt = document.createElement('option')
+            opt.value = bodypart
+            opt.innerHTML = bodypart
+            bodySelect.appendChild(opt)
         })
     }
 }
