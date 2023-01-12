@@ -78,7 +78,7 @@ class ExerciseTableComponent extends HTMLElement {
         searchButton.addEventListener("click", ()=>{
             const searchInput = this.root.querySelector("#search-input") as HTMLInputElement
             const searchTerm = searchInput.value.toLocaleLowerCase()
-            const filteredExercises = this.exerciseList.filter(exercise => exercise.name.toLowerCase().startsWith(searchTerm))
+            const filteredExercises = this.exerciseList.filter(exercise => exercise.name.toLowerCase().includes(searchTerm))
             this.render(filteredExercises)
         })
     }
