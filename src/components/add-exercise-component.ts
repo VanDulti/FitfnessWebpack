@@ -96,7 +96,7 @@ class AddExerciseComponent extends HTMLElement {
 
         //Set the ID inputfield
         id.value = Math.floor(Math.random() * 100000).toString()
-        
+
         //Set the selectlist with categories
         categorySelect.innerHTML = ''
         const categories = new Set(exercises.map((exercise) => exercise.category))
