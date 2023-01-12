@@ -1,0 +1,17 @@
+@import url('https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css');
+
+div {
+    margin: 0 auto;
+}
+
+#card {
+    width: 1000px;
+}
+
+#image-div {
+    text-align: center;
+}
+
+td {
+    white-space: pre-line;
+}

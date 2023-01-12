@@ -1,0 +1,10 @@
+@import url('https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css');
+
+.table {
+    width: 100%;
+}
+
+.table tr:hover {
+    background-color: #D8D8D8;
+    cursor: pointer;
+}

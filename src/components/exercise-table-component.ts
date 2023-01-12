@@ -6,15 +6,9 @@ import store from "../model/store"
 import router from "./app-component"
 
 const tableTemplate = html`
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/src/css/exercise-table.css"/>
 
-    <style>
-        .table tr:hover {
-            background-color: #D8D8D8;
-        }
-    </style>
-
-    <div style="font-family: Inter, sans-serif">
+    <div>
         <h1 class="title">Übungsübersicht</h1>
         <div style="font-family: Inter, sans-serif">
         <div class="field has-addons">
@@ -29,7 +23,7 @@ const tableTemplate = html`
         </div>
         <div class="card"> 
             <div class="card-content">
-                <table class="table" style="width: 1400px;margin: 0 auto;">    
+                <table class="table">    
                     <thead>
                         <tr>
                             <th>Id</th>
@@ -68,14 +62,16 @@ class ExerciseTableComponent extends HTMLElement {
         this.root = this.attachShadow({ mode: "closed" })
     }
     async connectedCallback() {
+        console.log("ExerciseTableComponent connected")
+
         exerciseService.fetch()
-        store.subscribe(model =>{
+        store.subscribe(model => {
             this.exerciseList = model.exercises
             this.render(model.exercises)
         })
 
         const searchButton = this.root.querySelector("#search-button")
-        searchButton.addEventListener("click", ()=>{
+        searchButton.addEventListener("click", () => {
             const searchInput = this.root.querySelector("#search-input") as HTMLInputElement
             const searchTerm = searchInput.value.toLocaleLowerCase()
             const filteredExercises = this.exerciseList.filter(exercise => exercise.name.toLowerCase().includes(searchTerm))

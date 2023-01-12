@@ -2,18 +2,22 @@ import Navigo from 'navigo'
 import { html, render } from "lit-html"
 import "./exercise-table-component"
 import "./exercise-detail-component"
+import "./add-exercise-component"
 
 const appComponentTemplate = html`
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/src/css/main.css"/>
 
-    <div class="card" style=""> 
+    <div class="card"> 
         <div class="card-content">
             <nav class="navbar" role="navigation" aria-label="main navigation">
-                <img src="logo.png" width="150"/>
+                <a href="/" data-navigo><img src="/logo.png" width="150"/></a>
                 <div class="navbar-menu">
                     <div class="navbar-start">
-                        <a class="navbar-item" style="font-family: Inter, sans-serif" href="/" data-navigo>
-                            &nbsp;&nbsp;&nbsp;&nbsp;Home
+                        <a class="navbar-item"  href="/" data-navigo>
+                            Home
+                        </a>
+                        <a class="navbar-item" href="/add" data-navigo>
+                            Add
                         </a>
                     </div>
                 </div>
@@ -26,6 +30,7 @@ const appComponentTemplate = html`
         <div id="content">
             <exercise-table></exercise-table>
             <exercise-detailed></exercise-detailed>
+            <add-exercise></add-exercise>
         </div>
     </div>`
 
@@ -48,6 +53,10 @@ class AppComponent extends HTMLElement {
             '/exercises/:id': ({ data }: any) => {
                 this.showDetails(data.id)
                 console.log(data.id)
+            },
+            '/add': () => {
+                console.log("/add");
+                this.showAddExercise()
             }
         }).resolve()
     }
@@ -56,7 +65,21 @@ class AppComponent extends HTMLElement {
         render(appComponentTemplate, this.shadowRoot)
     }
 
+    showAddExercise() {
+        const addExercise: HTMLElement = this.shadowRoot.querySelector("add-exercise")
+        addExercise.style.display = "block"
+
+        const details: HTMLElement = this.shadowRoot.querySelector("exercise-detailed")
+        details.style.display = "none"
+
+        const table: HTMLElement = this.shadowRoot.querySelector("exercise-table")
+        table.style.display = "none"
+    }
+
     showDetails(id: number) {
+        const addExercise: HTMLElement = this.shadowRoot.querySelector("add-exercise")
+        addExercise.style.display = "none"
+
         const table: HTMLElement = this.shadowRoot.querySelector("exercise-table")
         table.style.display = "none"
 
@@ -66,6 +89,9 @@ class AppComponent extends HTMLElement {
     }
 
     showTable() {
+        const addExercise: HTMLElement = this.shadowRoot.querySelector("add-exercise")
+        addExercise.style.display = "none"
+
         const details: HTMLElement = this.shadowRoot.querySelector("exercise-detailed")
         details.style.display = "none"
 
