@@ -101,7 +101,7 @@ class AddExerciseComponent extends HTMLElement {
         categorySelect.innerHTML = ''
         const categories = this.getValues(exercises, 0)
         categories.forEach(category => {
-            var opt = document.createElement('option');
+            let opt = document.createElement('option');
             opt.value = category;
             opt.innerHTML = category;
             categorySelect.appendChild(opt);
@@ -111,7 +111,7 @@ class AddExerciseComponent extends HTMLElement {
         bodySelect.innerHTML = ''
         const bodyparts = this.getValues(exercises, 1)
         bodyparts.forEach(body => {
-            var opt = document.createElement('option');
+            let opt = document.createElement('option');
             opt.value = body;
             opt.innerHTML = body;
             bodySelect.appendChild(opt);
