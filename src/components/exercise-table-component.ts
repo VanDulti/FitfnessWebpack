@@ -6,7 +6,6 @@ import store from "../model/store"
 import router from "./app-component"
 
 const tableTemplate = html`
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="/src/css/exercise-table.css"/>
 
 <<<<<<< HEAD
