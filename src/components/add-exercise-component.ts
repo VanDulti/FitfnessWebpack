@@ -98,7 +98,7 @@ class AddExerciseComponent extends HTMLElement {
         id.value = Math.floor(Math.random() * 100000).toString()
         //Set the selectlist with categories
         categorySelect.innerHTML = ''
-        const categories = this.getValues(exercises, 0)
+        const categories = new Set(exercises.map((exercise) => exercise.category))
         categories.forEach(category => {
             let opt = document.createElement('option');
             opt.value = category;
@@ -108,7 +108,7 @@ class AddExerciseComponent extends HTMLElement {
 
         //Set the selectlist with bodyparts
         bodySelect.innerHTML = ''
-        const bodyparts = this.getValues(exercises, 1)
+        const bodyparts = new Set(exercises.map((exercise) => exercise.body))
         bodyparts.forEach(body => {
             let opt = document.createElement('option');
             opt.value = body;
@@ -127,15 +127,6 @@ class AddExerciseComponent extends HTMLElement {
             }
             exerciseService.postData(newExercise)
         });
-    }
-
-    private getValues(exercises: Exercise[], nr: Number) {
-        const temp: string[] = []
-        exercises.forEach(exercise => {
-            if (nr == 0) { temp.push(exercise.category) } else { temp.push(exercise.body) }
-        })
-        const help = new Set(temp)
-        return help
     }
 }
 
