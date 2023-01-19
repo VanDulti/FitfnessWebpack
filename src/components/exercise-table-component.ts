@@ -41,6 +41,11 @@ const tableTemplate = html`
                 </div>
             </div>
         </div>
+        <div class="control">
+                <button class="button is-info" id="filter">
+                    Filter
+                </button>
+            </div>
         <div class="card"> 
             <div class="card-content">
                 <table class="table" style="width: 1400px;margin: 0 auto;">    
@@ -76,6 +81,8 @@ const rowTemplate = (exercise: Exercise) => html
 class ExerciseTableComponent extends HTMLElement {
     private root: ShadowRoot
     private exerciseList: Exercise[] = []
+    private categoryfilter: string
+    private bodypartfilter: string
 
     constructor() {
         super()
@@ -92,7 +99,15 @@ class ExerciseTableComponent extends HTMLElement {
         searchButton.addEventListener("click", () => {
             const searchInput = this.root.querySelector("#search-input") as HTMLInputElement
             const searchTerm = searchInput.value.toLocaleLowerCase()
-            const filteredExercises = this.exerciseList.filter(exercise => exercise.name.toLowerCase().includes(searchTerm))
+            const filteredExercises = this.exerciseList.filter(exercise => exercise.name.toLowerCase().includes(searchTerm) )
+            this.render(filteredExercises)
+        })
+        const filterButton = this.root.querySelector("#filter")
+        filterButton.addEventListener("click", () => {
+            const categoryfilter: HTMLInputElement = this.root.querySelector('#categorySelect')
+            const bodypartfilter: HTMLInputElement = this.root.querySelector('#bodySelect')
+            const filteredExercises = this.exerciseList.filter(exercise => exercise.category.toLocaleLowerCase()=== categoryfilter.value.toLocaleLowerCase()
+            && exercise.body.toLocaleLowerCase()=== bodypartfilter.value.toLocaleLowerCase())
             this.render(filteredExercises)
         })
     }
@@ -113,7 +128,7 @@ class ExerciseTableComponent extends HTMLElement {
 
         //Set the selectlist with categories
         categorySelect.innerHTML = ''
-        const categories = new Set(exercises.map((exercises) => exercises.category))
+        const categories = new Set(this.exerciseList.map((exercises) => exercises.category))
         categories.forEach(category => {
             let opt = document.createElement('option')
             opt.value = category
@@ -122,13 +137,16 @@ class ExerciseTableComponent extends HTMLElement {
         })
         //Set the selectlist with bodypart
         bodySelect.innerHTML = ''
-        const bodypart = new Set(exercises.map((exercises) => exercises.body))
+        const bodypart = new Set(this.exerciseList.map((exercises) => exercises.body))
         bodypart.forEach(bodypart => {
             let opt = document.createElement('option')
             opt.value = bodypart
             opt.innerHTML = bodypart
             bodySelect.appendChild(opt)
         })
+        
+//        this.categoryfilter = categorySelect.value
+//        this.bodypartfilter = bodySelect.value
     }
 }
 
