@@ -13,7 +13,7 @@ const tableTemplate = html`
         <div style="font-family: Inter, sans-serif">
         <div class="field has-addons">
             <div class="control">
-                <input class="input" type="text" placeholder="Search by name or category" id="search-input">
+                <input class="input" type="text" placeholder="Search by name" id="search-input">
             </div>
             <div class="control">
                 <button class="button is-info" id="search-button">
@@ -21,6 +21,25 @@ const tableTemplate = html`
                 </button>
             </div>
         </div>
+        <div class="field">
+            <div class="control">
+                <div class="select">
+                    <select id="categorySelect"></select>
+                    </div>
+                </div>
+            </div>
+        <div class="field">
+            <div class="control">
+                <div class="select">
+                    <select id="bodySelect"></select>
+                </div>
+            </div>
+        </div>
+        <div class="control">
+                <button class="button is-info" id="filter">
+                    Filter
+                </button>
+            </div>
         <div class="card"> 
             <div class="card-content">
                 <table class="table">    
@@ -56,6 +75,8 @@ const rowTemplate = (exercise: Exercise) => html
 class ExerciseTableComponent extends HTMLElement {
     private root: ShadowRoot
     private exerciseList: Exercise[] = []
+    private categoryfilter: string
+    private bodypartfilter: string
 
     constructor() {
         super()
@@ -74,12 +95,25 @@ class ExerciseTableComponent extends HTMLElement {
         searchButton.addEventListener("click", () => {
             const searchInput = this.root.querySelector("#search-input") as HTMLInputElement
             const searchTerm = searchInput.value.toLocaleLowerCase()
-            const filteredExercises = this.exerciseList.filter(exercise => exercise.name.toLowerCase().includes(searchTerm))
+            const filteredExercises = this.exerciseList.filter(exercise => exercise.name.toLowerCase().includes(searchTerm) )
+            this.render(filteredExercises)
+        })
+        const filterButton = this.root.querySelector("#filter")
+        filterButton.addEventListener("click", () => {
+            const categoryfilter: HTMLInputElement = this.root.querySelector('#categorySelect')
+            const bodypartfilter: HTMLInputElement = this.root.querySelector('#bodySelect')
+            const filteredExercises = this.exerciseList.filter(exercise => exercise.category.toLocaleLowerCase()=== categoryfilter.value.toLocaleLowerCase()
+            && exercise.body.toLocaleLowerCase()=== bodypartfilter.value.toLocaleLowerCase())
             this.render(filteredExercises)
         })
     }
+
     private render(exercises: Exercise[]) {
         render(tableTemplate, this.root)
+
+        const categorySelect: HTMLInputElement = this.root.querySelector('#categorySelect')
+        const bodySelect: HTMLInputElement = this.root.querySelector('#bodySelect')
+
         const body = this.root.querySelector("tbody")
         body.innerHTML = ''
         exercises.forEach(exercise => {
@@ -87,6 +121,28 @@ class ExerciseTableComponent extends HTMLElement {
             row.onclick = () => router.navigate(`/exercises/${exercise.id}`)
             render(rowTemplate(exercise), row)
         })
+
+        //Set the selectlist with categories
+        categorySelect.innerHTML = ''
+        const categories = new Set(this.exerciseList.map((exercises) => exercises.category))
+        categories.forEach(category => {
+            let opt = document.createElement('option')
+            opt.value = category
+            opt.innerHTML = category
+            categorySelect.appendChild(opt)
+        })
+        //Set the selectlist with bodypart
+        bodySelect.innerHTML = ''
+        const bodypart = new Set(this.exerciseList.map((exercises) => exercises.body))
+        bodypart.forEach(bodypart => {
+            let opt = document.createElement('option')
+            opt.value = bodypart
+            opt.innerHTML = bodypart
+            bodySelect.appendChild(opt)
+        })
+        
+//        this.categoryfilter = categorySelect.value
+//        this.bodypartfilter = bodySelect.value
     }
 }
 
